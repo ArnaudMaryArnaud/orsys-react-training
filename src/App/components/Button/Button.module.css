@@ -6,13 +6,18 @@
     border-radius: 30px;
     margin-right:  7px;
     margin-bottom: 12px;
-    box-shadow:  15px 15px 25px grey;
+    box-shadow: 15px 15px 25px grey;
     font-weight: 900;
     font-size: x-large;
 }
 
 .Button.hover{
-    box-shadow:  10px 10px 25px grey;
+    box-shadow: 10px 10px 25px grey;
     border: 1px solid grey;
     color: grey;
+}
+.clicked{
+    box-shadow: 5px 5px 25px black !important;
+    border: 1px solid black !important;
+    color: black !important;
 }
