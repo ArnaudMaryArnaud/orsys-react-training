@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
 const Button=(props) => {
     let message = "Please click me Mr " + props.text;
     return (
-    <button className={style.Button} 
+    <button onClick={(evt) => {console.log(evt)}} className={style.Button} 
     /**
      * order matter, the last one wins in case of duplicate properties
      */
