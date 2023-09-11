@@ -1,3 +1,12 @@
 .Button{
-    background-color: tomato;
+    border: 1px solid white;
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 150 px;
+    margin-right:  7 px;
+    margin-bottom: 12 px;
+    box-shadow:  15px 15px 25px grey;
+    font-weight: 900;
+    font-size: x-large;
 }

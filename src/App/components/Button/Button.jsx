@@ -1,4 +1,7 @@
 import React from 'react'
+/**
+ * Permet d'avoir un fichier css avec un nom dynamique
+ */
 import style from'./Button.module.css'
 
 const Button=(props) => {
