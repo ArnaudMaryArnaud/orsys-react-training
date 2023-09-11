@@ -9,8 +9,8 @@ import Button from './components/Button/Button.jsx';
 const App=(props) => {
     return (
     <div className='App'>DEMAT BREIZH<hr/>
-    <Button text="benjamin" bgcolor="green" />
-    <Button text="button"/>
+    <Button text="benjamin" bgcolor="tomato" color="yellow" />
+    <Button text="button" color="red" bgcolor="blue"/>
     </div>
     )
 };
