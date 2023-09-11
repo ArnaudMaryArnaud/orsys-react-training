@@ -12,7 +12,15 @@ import PropTypes from 'prop-types'
 const Button=(props) => {
     let message = "Please click me Mr " + props.text;
     return (
-    <button onClick={(evt) => {console.log(evt)}} className={style.Button} 
+    <button 
+    /**
+     * Event onClick
+     */
+    onClick={(evt) => {
+        console.log(evt)
+        props.onClick('Activated I was');
+    }} 
+    className={style.Button} 
     /**
      * order matter, the last one wins in case of duplicate properties
      */
@@ -27,6 +35,7 @@ Button.propTypes={
     text: PropTypes.string.isRequired,
     bgcolor: PropTypes.oneOf(['blue','green','tomato','transparent']),
     color: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
     style: PropTypes.shape({
         width: PropTypes.string,
         padding: PropTypes.string,
