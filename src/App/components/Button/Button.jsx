@@ -7,7 +7,7 @@ import style from'./Button.module.css'
 const Button=(props) => {
     let message = "Click Me please mister " + props.text;
     return (
-    <button className={style.Button}>{message}</button>
+    <button className={style.Button} style={{backgroundColor: props.bgcolor}}>{message}</button>
     )
 };
 

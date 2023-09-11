@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './components/Button/Button.jsx';
+
 /**
  * 
  * @param {*} props 
@@ -8,7 +9,7 @@ import Button from './components/Button/Button.jsx';
 const App=(props) => {
     return (
     <div className='App'>DEMAT BREIZH<hr/>
-    <Button text="benjamin"/>
+    <Button text="benjamin" bgcolor="green" />
     <Button text="button"/>
     </div>
     )

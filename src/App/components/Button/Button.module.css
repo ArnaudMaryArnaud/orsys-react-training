@@ -3,10 +3,16 @@
     padding: 5px 10px;
     background-color: blue;
     color: white;
-    border-radius: 150 px;
-    margin-right:  7 px;
-    margin-bottom: 12 px;
+    border-radius: 30px;
+    margin-right:  7px;
+    margin-bottom: 12px;
     box-shadow:  15px 15px 25px grey;
     font-weight: 900;
     font-size: x-large;
+}
+
+.Button.hover{
+    box-shadow:  10px 10px 25px grey;
+    border: 1px solid grey;
+    color: grey;
 }
