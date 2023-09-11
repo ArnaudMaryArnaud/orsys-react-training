@@ -8,8 +8,8 @@ import Button from './components/Button/Button.jsx';
 const App=(props) => {
     return (
     <div className='App'>DEMAT BREIZH<hr/>
-    <Button/>
-    <Button/>
+    <Button text="benjamin"/>
+    <Button text="button"/>
     </div>
     )
 };
