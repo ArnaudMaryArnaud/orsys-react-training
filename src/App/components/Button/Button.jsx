@@ -10,21 +10,12 @@ import PropTypes from 'prop-types'
 
 
 const Button=(props) => {
-    let message = "Please click me Mr " + props.text;
     return (
-    <button 
-    /**
-     * Event onClick
-     */
-    onClick={(evt) => {
-        console.log(evt)
-        props.onClick('Activated I was');
-    }} 
-    className={style.Button} 
+    <button onClick={(evt) => {props.onClick}} className={style.Button} 
     /**
      * order matter, the last one wins in case of duplicate properties
      */
-    style={{backgroundColor: props.bgcolor, ...props.style, color: props.color}}>{message}</button>
+    style={{backgroundColor: props.bgcolor, ...props.style, color: props.color}}>{props.children}</button>
     )
 };
 
@@ -32,7 +23,7 @@ Button.propTypes={
     /**
      * Define proptypes and mandatory fields
      */
-    text: PropTypes.string.isRequired,
+    children: PropTypes.any.isRequired,
     bgcolor: PropTypes.oneOf(['blue','green','tomato','transparent']),
     color: PropTypes.string,
     onClick: PropTypes.func.isRequired,
