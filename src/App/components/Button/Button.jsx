@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 
 const Button=(props) => {
     return (
-    <button onClick={(evt) => {props.onClick}} className={style.Button} 
+    <button onClick={(evt) => {props.onClick()}} className={style.Button} 
     /**
      * order matter, the last one wins in case of duplicate properties
      */

@@ -1,20 +1,40 @@
-import React from 'react'
-import Button from './components/Button/Button.jsx';
+import React, { useState } from "react";
+import Button from "./components/Button/Button.jsx";
 
 /**
- * 
- * @param {*} props 
- * @returns 
+ *
+ * @param {*} props
+ * @returns
  */
-const App=(props) => {
-    return (
-    <div className='App'>DEMAT BREIZH<hr/>
-    <Button bgcolor="transparent" color="black" style={{width: '254px', padding:'60px 80px'}}  onClick={(arg) => {console.log('button 1 has been triggered', arg)}}>
-        Benjamin  <img src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_OK.ru-512.png" style={{height: "32px", width:"32px"}}/>
-    </Button>
-    <Button children="Click me" bgcolor='blue' onClick={(arg) => {console.log('button 2 activated', arg)}}/>
+const App = (props) => {
+  /**
+   * State utilization. As many states as wanted in function, only one in class
+   * schema as follow const [name, setter] = useState(intialValue)
+   */
+
+  const [state, setState] = useState({counter:0,hello:"world"})
+  return (
+    <div className="App">
+      Counter value : {state.counter}
+      <hr />
+      <Button
+        bgcolor="tomato"
+        onClick={() => {
+          setState({...state, counter: state.counter - 1 });
+          console.log(state);
+        }}
+      >
+        -
+      </Button>
+      <Button
+        onClick={() => {
+          setState({...state, counter: state.counter + 1 });
+          console.log(state);
+        }}
+      >+
+      </Button>
     </div>
-    )
-};
+  )
+}
 
 export default App;
