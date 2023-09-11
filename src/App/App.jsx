@@ -15,12 +15,13 @@ const App = (props) => {
   const [state, setState] = useState({ counter: -1, hello: "wolrd" });
   useEffect(
     () => {
+      // first
 
+      //Use for the unmount of the component
       // return () => {
       //   second
       // }
     },
-    /** Array of dependencies which are going to be observed*/
     [state]
   );
 
