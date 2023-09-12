@@ -9,14 +9,14 @@ import style from "./Button.module.css";
 import PropTypes from "prop-types";
 
 const Button = (props) => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setisClicked] = useState(false);
   useEffect(() => {
-    setTimeout(() => {setIsClicked(false)}, 180);
+    setTimeout(() => {setisClicked(false)}, 180);
   }, [isClicked])
   return (
     <button
       onClick={(evt) => {
-        setIsClicked(true);
+        setisClicked(true);
         props.onClick();
       }}
       className={isClicked ? style.Button + " " + style.clicked : style.Button}
@@ -28,6 +28,7 @@ const Button = (props) => {
         ...props.style,
         color: props.color,
       }}
+      type={props.type}
     >
       {props.children}
     </button>
@@ -46,6 +47,7 @@ Button.propTypes = {
     width: PropTypes.string,
     padding: PropTypes.string,
   }),
+  type: PropTypes.oneOf(["button", "submit", "reset", undefined])
 };
 
 /**

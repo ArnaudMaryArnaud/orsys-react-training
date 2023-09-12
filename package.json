@@ -13,8 +13,11 @@
     "gen-layout": "npx generate-react-cli c --type=layout"
   },
   "dependencies": {
+    "bootstrap": "^5.3.1",
+    "jquery": "^3.7.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
