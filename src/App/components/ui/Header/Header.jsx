@@ -1,15 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Header.module.css';
 
 const Header = () => (
   <div className={styles.Header} data-testid="Header">
-    Header Component
+   <span> 🔥 </span> The one and only Meme Generator. Use it with caution it can be addictive <span> 🔥 </span><hr/>
   </div>
 );
-
-Header.propTypes = {};
-
-Header.defaultProps = {};
 
 export default Header;

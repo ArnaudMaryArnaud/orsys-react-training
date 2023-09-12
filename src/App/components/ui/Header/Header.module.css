@@ -1,1 +1,6 @@
-.Header {}
+.Header {
+    font-size: large;
+    font-style: bold;
+    color: darkblue;
+    text-align: center;
+}
