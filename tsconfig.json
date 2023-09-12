@@ -21,6 +21,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "public/grc_template/functionWithState/TemplateName.jsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

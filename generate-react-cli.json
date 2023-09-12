@@ -1,6 +1,6 @@
 {
   "usesTypeScript": false,
-  "usesStyledComponents": true,
+  "usesStyledComponents": false,
   "useCssModule": true,
   "cssPreprocessor": "css",
   "testLibrary": "Testing Library",
@@ -11,6 +11,24 @@
       "withTest": true,
       "withStory": true,
       "withLazy": true
+    },
+    "function":{
+      "path": "src/App/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true,
+      "customTemplates":{
+        "component": "grc_template/functionWithState/TemplateName.jsx"
+      }
+    },
+    "ui":{
+      "path": "src/App/components/ui",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true
     }
+    
   }
 }
