@@ -12,23 +12,34 @@
       "withStory": true,
       "withLazy": true
     },
-    "function":{
+    "function": {
       "path": "src/App/components",
       "withStyle": true,
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplates":{
+      "customTemplates": {
         "component": "grc_template/functionWithState/TemplateName.jsx"
       }
     },
-    "ui":{
+    "ui": {
       "path": "src/App/components/ui",
       "withStyle": true,
       "withTest": true,
       "withStory": true,
       "withLazy": true
+    },
+    "layout": {
+      "path": "src/App/components/layout",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true,
+      "customTemplates": {
+        "component": "grc_template/functionLayout/TemplateName.jsx"
+      }
     }
-    
-  }
+
+  },
+  "usesCssModule": true
 }
