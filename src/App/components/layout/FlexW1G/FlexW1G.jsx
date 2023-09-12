@@ -4,7 +4,7 @@ import styles from "./FlexW1G.module.css";
 
 const FlexW1G = (props) => {
     return (
-        <div classeName={styles.FlexW1G} data-testid="FlexW1G">
+        <div className={styles.FlexW1G} data-testid="FlexW1G">
             {props.children}
         </div>
     );

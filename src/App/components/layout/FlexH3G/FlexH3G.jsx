@@ -4,7 +4,7 @@ import styles from "./FlexH3G.module.css";
 
 const FlexH3G = (props) => {
     return (
-        <div classeName={styles.FlexH3G} data-testid="FlexH3G">
+        <div className={styles.FlexH3G} data-testid="FlexH3G">
             {props.children}
         </div>
     );

@@ -1,62 +1,25 @@
-import React, { useState, useEffect } from "react";
-import Button from "./components/Button/Button.jsx";
+import React from 'react'
+import FlexW1G from './components/layout/FlexW1G/FlexW1G'
+import FlexH3G from './components/layout/FlexH3G/FlexH3G'
+import Footer from './components/ui/Footer/Footer'
+import Navbar from './components/ui/Navbar/Navbar'
+import Header from './components/ui/Header/Header'
+import MemeForm from './components/MemeForm/MemeForm'
 
-/**
- *
- * @param {*} props
- * @returns
- */
-const App = (props) => {
-  /**
-   * State utilization. As many states as wanted in function, only one in class
-   * schema as follow const [name, setter] = useState(intialValue)
-   */
-
-  const [state, setState] = useState({ counter: -1, hello: "wolrd" });
-  useEffect(
-    () => {
-      // first
-
-      //Use for the unmount of the component
-      // return () => {
-      //   second
-      // }
-    },
-    [state]
-  );
-
-  useEffect(
-    () => {
-      setState({ ...state, counter: 0 });
-    },
-    /** Array of dependencies which are going to be observed. Empty => for the componentDidMount event */
-    []
-  );
-
+const App = () => {
   return (
-    <div className="App">
-      Counter value : {state.counter}
-      <hr />
-      <Button
-        bgcolor="tomato"
-        onClick={() => {
-          /**
-           * The spread operator alias ... duplicate the current object
-           */
-          setState({ ...state, counter: state.counter - 1 });
-        }}
-      >
-        -
-      </Button>
-      <Button
-        onClick={() => {
-          setState({ ...state, counter: state.counter + 1 });
-        }}
-      >
-        +
-      </Button>
+    <div className='App'>
+      <FlexH3G>
+        <Header></Header>
+        <Navbar></Navbar>
+        <FlexW1G>
+          <div>Viewer</div>
+          <MemeForm></MemeForm>
+        </FlexW1G>
+        <Footer></Footer>
+      </FlexH3G>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
