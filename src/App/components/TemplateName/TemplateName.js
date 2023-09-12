@@ -1,12 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { TemplateNameWrapper } from './TemplateName.styled';
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import styles from "./TemplateName.module.css";
 
-const TemplateName = () => (
- <TemplateNameWrapper data-testid="TemplateName">
-    TemplateName Component
- </TemplateNameWrapper>
-);
+const TemplateNameInitialState = {};
+const TemplateName = (props) => {
+  useEffect(() => {
+    console.log("montage de TemplateName");
+  }, []);
+  const [state, setstate] = useState(TemplateNameInitialState);
+  return (
+    <div className={styles.TemplateName} data-testid="TemplateName">
+      TemplateName Component
+    </div>
+  );
+};
 
 TemplateName.propTypes = {};
 
