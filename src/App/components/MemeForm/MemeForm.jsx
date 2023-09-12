@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./MemeForm.module.css";
+import Button from "../Button/Button";
 
 const memeFormInitialState = {};
 const MemeForm = (props) => {
@@ -111,6 +112,7 @@ const MemeForm = (props) => {
         />
         px
         <br />
+        <Button type={"submit"}></Button>
       </form>
     </div>
   );

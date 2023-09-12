@@ -11,13 +11,15 @@ import PropTypes from "prop-types";
 const Button = (props) => {
   const [isClicked, setisClicked] = useState(false);
   useEffect(() => {
-    setTimeout(() => {setisClicked(false)}, 180);
-  }, [isClicked])
+    setTimeout(() => {
+      setisClicked(false);
+    }, 180);
+  }, [isClicked]);
   return (
     <button
       onClick={(evt) => {
         setisClicked(true);
-        props.onClick();
+        if (undefined !== props.onClick) props.onClick();
       }}
       className={isClicked ? style.Button + " " + style.clicked : style.Button}
       /**
@@ -42,12 +44,12 @@ Button.propTypes = {
   children: PropTypes.any.isRequired,
   bgcolor: PropTypes.oneOf(["blue", "green", "tomato", "transparent"]),
   color: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   style: PropTypes.shape({
     width: PropTypes.string,
     padding: PropTypes.string,
   }),
-  type: PropTypes.oneOf(["button", "submit", "reset", undefined])
+  type: PropTypes.oneOf(["button", "submit", "reset", undefined]),
 };
 
 /**
