@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FlexW1G from "./components/layout/FlexW1G/FlexW1G";
 import FlexH3G from "./components/layout/FlexH3G/FlexH3G";
 import Footer from "./components/ui/Footer/Footer";
@@ -10,14 +10,12 @@ import { DummyMeme } from "./interfaces/common";
 
 const App = () => {
   const [current, setcurrent] = useState(DummyMeme);
-  const [images, setImages] = useState([
-    {
-      id: 0,
-      url: "https://th.bing.com/th/id/OIF.njJjZq1cjl1dqPBx6lqClA?w=298&h=180&c=7&r=0&o=5&pid=1.7",
-      w: 298,
-      h: 180,
-    },
-  ]);
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:7956/images").then((response) => response.json()).then((a) => setImages(a));
+  }, [])
+  
   return (
     <div className="App">
       <FlexH3G>
