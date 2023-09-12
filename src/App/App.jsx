@@ -40,6 +40,9 @@ const App = (props) => {
       <Button
         bgcolor="tomato"
         onClick={() => {
+          /**
+           * The spread operator alias ... duplicate the current object
+           */
           setState({ ...state, counter: state.counter - 1 });
         }}
       >
