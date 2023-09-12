@@ -28,6 +28,7 @@ const App = () => {
             basePath=""
           ></MemeViewer>
           <MemeForm
+          images={images}
             meme={current}
             onMemeChange={(newMeme) => {
               setcurrent(newMeme);
