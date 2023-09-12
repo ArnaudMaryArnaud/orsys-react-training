@@ -42,7 +42,7 @@ Button.propTypes = {
    * Define proptypes and mandatory fields
    */
   children: PropTypes.any.isRequired,
-  bgcolor: PropTypes.oneOf(["blue", "green", "tomato", "transparent"]),
+  bgcolor: PropTypes.oneOf(["blue", "green", "tomato", "transparent", "red"]),
   color: PropTypes.string,
   onClick: PropTypes.func,
   style: PropTypes.shape({
