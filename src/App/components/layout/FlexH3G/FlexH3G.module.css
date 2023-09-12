@@ -1,1 +1,8 @@
-.FlexH3G {}
+.FlexH3G {
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+}
+.FlexH3G>*:nth-child(3){
+    flex-grow: 1;
+}
