@@ -7,6 +7,7 @@ import MemeViewer from "./components/ui/MemeViewer/MemeViewer";
 import Header from "./components/ui/Header/Header";
 import MemeForm from "./components/MemeForm/MemeForm";
 import { DummyMeme } from "./interfaces/common";
+import {store} from "./store/store"
 
 const App = () => {
   const [current, setcurrent] = useState(DummyMeme);

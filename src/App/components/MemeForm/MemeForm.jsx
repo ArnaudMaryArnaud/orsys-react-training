@@ -93,7 +93,15 @@ const MemeForm = (props) => {
         <label htmlFor="color">
           <h2 className={styles.inline}>color :</h2>
         </label>
-        <input name="color" id="color" type="color" />
+        <input
+          name="color"
+          id="color"
+          type="color"
+          value={props.meme.color}
+          onChange={(evt) => {
+            props.onMemeChange({ ...props.meme, color: evt.target.value });
+          }}
+        />
         <br />
         <label htmlFor="fontSize">
           <h2 className={styles.inline}>font-size :</h2>

@@ -16,9 +16,6 @@ const ressources = createSlice({
         /** Empty the current images value without updating its reference */
         state.images.splice(0);
         state.images.push(action.payload);
-    },
-    addMeme(state,action) {
-        state.memes.push(action.payload)
     }
   }
 });
