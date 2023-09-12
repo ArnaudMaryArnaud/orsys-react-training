@@ -8,9 +8,9 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "gen-ui": "npx genereate-react-cli c --type=ui",
-    "gen-function": "npx genereate-react-cli c --type=function",
-    "gen-layout": "npx genereate-react-cli c --type=layout"
+    "gen-ui": "npx generate-react-cli c --type=ui",
+    "gen-func": "npx generate-react-cli c --type=function",
+    "gen-layout": "npx generate-react-cli c --type=layout"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
