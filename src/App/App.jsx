@@ -3,6 +3,7 @@ import FlexW1G from "./components/layout/FlexW1G/FlexW1G";
 import FlexH3G from "./components/layout/FlexH3G/FlexH3G";
 import Footer from "./components/ui/Footer/Footer";
 import Navbar from "./components/ui/Navbar/Navbar";
+import WelcomePage from "./components/ui/WelcomePage/WelcomePage";
 import { MemeThumbnailStoredData } from "./components/ui/MemeThumbnail/MemeThumbnail";
 import { CurrentMemeViewer } from "./components/ui/MemeViewer/MemeViewer";
 import Header from "./components/ui/Header/Header";
@@ -29,6 +30,7 @@ const App = () => {
         <Header />
         <Navbar />
         <Routes>
+          <Route path="/" element={<WelcomePage />} />
           <Route path="/thumbnail" element={<MemeThumbnailStoredData />} />
           <Route path="/editor" element={<PageEditor />} />
           <Route path="/editor/:id" element={<PageEditor />} />
