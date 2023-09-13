@@ -8,13 +8,14 @@ import Header from "./components/ui/Header/Header";
 import MemeForm from "./components/MemeForm/MemeForm";
 import { DummyMeme } from "./interfaces/common";
 import {store} from "./store/store"
+import {REST_ADR} from "./constantes/constantes";
 
 const App = () => {
   const [current, setcurrent] = useState(DummyMeme);
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:7956/images").then((response) => response.json()).then((a) => setImages(a));
+    fetch(REST_ADR + "/images").then((response) => response.json()).then((a) => setImages(a));
   }, [])
   
   return (

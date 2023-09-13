@@ -23,7 +23,7 @@ export const DummyMeme: IMeme = {
   underline: false,
   italic: false,
   imageId: 0,
-  color: '#ffffff',
+  color: '#000000',
   frameSizeX: 0,
   frameSizeY: 0
 }

@@ -7,10 +7,10 @@ const current = createSlice({
     initialState,
     reducers: {
         changeCurrent(state,action){
-
+            state.current.push(action.payload);
         },
         clearCurrent(state,action){
-
+            state.current.push(DummyMeme);
         }
     }
 });
