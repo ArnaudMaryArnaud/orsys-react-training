@@ -29,6 +29,15 @@ const ressources = createSlice({
         state.memes.push(...action.payload.memes);
       }
     );
+        /** Important the first param of addCase has to be the same than the first param of the createAsynThunk it is observing. in this case the saveCurrent in current.js */
+    builder.addCase("current/save/fulfilled", (state, action) => {
+      const index = state.memes.findIndex((m) => m.id === action.payload.id);
+      if (index === -1) {
+        state.memes.push(action.payload);
+      } else {
+        state.memes[index] = action.payload;
+      }
+    });
   },
 });
 
