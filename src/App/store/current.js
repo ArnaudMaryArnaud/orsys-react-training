@@ -9,7 +9,9 @@ const current = createSlice({
         changeCurrent(state,action){
            Object.assign(state, action.payload);
         },
-        clear(state,action){
+        clear(state){
+            delete state.id;
+            Object.assign(state,DummyMeme);
            
         }
     }
