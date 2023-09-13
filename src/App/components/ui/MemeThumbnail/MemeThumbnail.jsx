@@ -4,7 +4,7 @@ import styles from "./MemeThumbnail.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import FlexThumbnail from "../../layout/FlexThumbnail/FlexThumbnail";
 import MemeViewer from "../MemeViewer/MemeViewer";
-import {changeCurrent} from "../../../store/current";
+import { changeCurrent } from "../../../store/current";
 import { Link } from "react-router-dom";
 
 const MemeThumbnail = (props) => {
@@ -12,14 +12,14 @@ const MemeThumbnail = (props) => {
     <div className={styles.MemeThumbnail} data-testid="MemeThumbnail">
       <FlexThumbnail>
         {props.memes.map((m, mposition) => (
-          <Link to={'/editor/' + m.id}>
-                   <MemeViewer
+          <Link to={"/editor/" + m.id} key={"link-thumb-" + mposition}>
+            <MemeViewer
               key={"thumb-" + mposition}
               meme={m}
               image={props.images.find((i) => i.id === m.imageId)}
               basePath=""
             ></MemeViewer>
-           </Link>
+          </Link>
         ))}
       </FlexThumbnail>
     </div>
