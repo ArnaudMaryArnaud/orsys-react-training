@@ -40,7 +40,7 @@ export const fetchAllRessources = createAsyncThunk(
     const pall = await Promise.all([pi, pm]);
     const imgs = await pall[0].json();
     const mms = await pall[1].json();
-    return {images:imgs, memes:mms};
+    return { images: imgs, memes: mms };
   }
 );
 
