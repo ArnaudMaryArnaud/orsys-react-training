@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import styles from "./MemeForm.module.css";
 import Button from "../Button/Button";
+import {changeCurrent} from '../../store/current';
 
 const MemeForm = (props) => {
   return (
@@ -220,8 +222,27 @@ const MemeForm = (props) => {
   );
 };
 
-MemeForm.propTypes = {};
+MemeForm.propTypes = {
+  meme:PropTypes.object.isRequired,
+};
 
 MemeForm.defaultProps = {};
 
 export default MemeForm;
+
+export const MemeFormStoredData = (props) => {
+  const dispatch = useDispatch();
+  const imgs = useSelector((s) => s.ressources.images);
+  const c = useSelector((s) => s.current);
+
+  return (
+    <MemeForm
+      {...props}
+      images={imgs}
+      meme={c}
+      onMemeChange={(newMeme) => {
+        dispatch(changeCurrent(newMeme));
+      }}
+    ></MemeForm>
+  );
+};
