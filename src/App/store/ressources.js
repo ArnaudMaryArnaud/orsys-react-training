@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import {REST_ADR} from "../constantes/constantes";
+import { REST_ADR } from "../constantes/constantes";
 
 const initialState = {
   memes: [],
@@ -24,7 +24,9 @@ const ressources = createSlice({
       "ressources/fetchAllRessources/fulfilled",
       (state, action) => {
         state.images.splice(0);
-        state.images.push(...action.payload);
+        state.images.push(...action.payload.images);
+        state.memes.splice(0);
+        state.memes.push(...action.payload.memes);
       }
     );
   },
@@ -33,9 +35,12 @@ const ressources = createSlice({
 export const fetchAllRessources = createAsyncThunk(
   "ressources/fetchAllRessources",
   async () => {
-    const pimages = await fetch(REST_ADR + "/images");
-    const images = await pimages.json();
-    return images;
+    const pi = fetch(REST_ADR + "/images");
+    const pm = fetch(REST_ADR + "/memes");
+    const pall = await Promise.all([pi, pm]);
+    const imgs = await pall[0].json();
+    const mms = await pall[1].json();
+    return {images:imgs, memes:mms};
   }
 );
 
