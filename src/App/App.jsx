@@ -10,6 +10,8 @@ import { MemeFormStoredData } from "./components/MemeForm/MemeForm";
 import { DummyMeme } from "./interfaces/common";
 import { store } from "./store/store";
 import { REST_ADR } from "./constantes/constantes";
+import { Routes, Route, useParams } from "react-router-dom";
+import {changeCurrent, clear} from './store/current';
 
 const App = () => {
   const [current, setcurrent] = useState(DummyMeme);
@@ -24,17 +26,40 @@ const App = () => {
   return (
     <div className="App">
       <FlexH3G>
-        <Header></Header>
-        <Navbar></Navbar>
-        <MemeThumbnailStoredData />
-        <FlexW1G>
-          <CurrentMemeViewer basePath=""></CurrentMemeViewer>
-          <MemeFormStoredData />
-        </FlexW1G>
+        <Header />
+        <Navbar />
+        <Routes>
+          <Route path="/thumbnail" element={<MemeThumbnailStoredData />} />
+          <Route path="/editor" element={<PageEditor />} />
+          <Route path="/editor/:id" element={<PageEditor />} />
+        </Routes>
         <Footer></Footer>
       </FlexH3G>
     </div>
   );
 };
+
+/** Should be in a package page not here */
+function PageEditor() {
+  const params = useParams();
+
+  useEffect(() => {
+    const current = store
+      .getState()
+      .ressources.memes.find((m) => m.id === Number(params.id));
+    if (undefined !== current) {
+      store.dispatch(changeCurrent(current));
+    } else {
+      store.dispatch(clear());
+    }
+  }, [params, store.getState()]);
+
+  return (
+    <FlexW1G>
+      <CurrentMemeViewer basePath=""></CurrentMemeViewer>
+      <MemeFormStoredData />
+    </FlexW1G>
+  );
+}
 
 export default App;

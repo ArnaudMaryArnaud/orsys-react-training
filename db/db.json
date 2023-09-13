@@ -49,7 +49,7 @@
       "imageId": 1,
       "color": "#a3d714",
       "frameSizeX": 0,
-      "frameSizeY": 600,
+      "frameSizeY": 0,
       "id": 0
     },
     {
@@ -84,7 +84,7 @@
     },
     {
       "titre": "kjghdf",
-      "text": "jhghnf",
+      "text": "jhghnf122",
       "x": 0,
       "y": 17,
       "fontWeight": "500",
@@ -98,8 +98,8 @@
       "id": 3
     },
     {
-      "titre": "",
-      "text": "hello",
+      "titre": "Hello you",
+      "text": "Hello you",
       "x": 0,
       "y": 17,
       "fontWeight": "500",
@@ -107,14 +107,14 @@
       "underline": false,
       "italic": false,
       "imageId": 0,
-      "color": "#000000",
+      "color": "#0d44e7",
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 4
     },
     {
       "titre": "",
-      "text": "kjhtgfedsq",
+      "text": "kjhtgfedsq = idk",
       "x": 0,
       "y": 17,
       "fontWeight": "500",
@@ -122,7 +122,7 @@
       "underline": false,
       "italic": false,
       "imageId": 0,
-      "color": "#000000",
+      "color": "#08630e",
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 5
@@ -169,7 +169,7 @@
       "imageId": 0,
       "color": "#5e9dc5",
       "frameSizeX": 0,
-      "frameSizeY": 101,
+      "frameSizeY": 0,
       "id": 8
     },
     {
@@ -182,44 +182,44 @@
       "underline": true,
       "italic": false,
       "imageId": 2,
-      "color": "#f00fb4",
+      "color": "#f00f0f",
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 9
     },
     {
       "titre": "",
-      "text": "Hello World",
-      "x": 0,
+      "text": "Viva React",
+      "x": 250,
       "y": 25,
       "fontWeight": "500",
       "fontSize": 30,
       "underline": false,
       "italic": false,
       "imageId": 0,
-      "color": "#000000",
+      "color": "#f5ed0a",
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 10
     },
     {
-      "titre": "",
-      "text": "Hello World",
-      "x": 0,
+      "titre": "Happy life",
+      "text": "Happy life",
+      "x": 150,
       "y": 25,
       "fontWeight": "500",
       "fontSize": 30,
       "underline": false,
       "italic": false,
       "imageId": 0,
-      "color": "#000000",
+      "color": "#e8179b",
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 11
     },
     {
       "titre": "",
-      "text": "Hello World",
+      "text": "Goddamn Angular",
       "x": 0,
       "y": 25,
       "fontWeight": "500",
@@ -227,7 +227,7 @@
       "underline": false,
       "italic": false,
       "imageId": 0,
-      "color": "#000000",
+      "color": "#eb0fa5",
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 12
@@ -246,6 +246,21 @@
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 13
+    },
+    {
+      "titre": "Foutu windows",
+      "text": "Not gain windows",
+      "x": 0,
+      "y": 180,
+      "fontWeight": "500",
+      "fontSize": 30,
+      "underline": false,
+      "italic": true,
+      "imageId": 2,
+      "color": "#f1f500",
+      "frameSizeX": 0,
+      "frameSizeY": 0,
+      "id": 14
     }
   ]
 }
